@@ -1,5 +1,19 @@
+html, body {
+  height: 100%;
+}
+
 body {
     padding-top: 65px;
+}
+
+#wrap {
+  min-height: 100%;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.panel-primary .panel-heading a {
+  color: #fff;
 }
 
 .timeline {
@@ -14,6 +28,31 @@ body {
 
 .timeline .label {
   padding: .3em .6em;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.navbar-fixed-bottom ul {
+  line-height: 45px;
+  list-style: none;
+}
+
+.navbar-fixed-bottom li {
+  display:inline-block;
+  margin-left: 10px;
+}
+
+.navbar-fixed-bottom ul img,
+.navbar-fixed-bottom ul svg {
+  vertical-align: bottom;
+}
+
+@media(max-width: 767px) {
+  .container .text-muted {
+    font-size: 11px;
+  }
 }
 
 @media(min-width: 768px) {
