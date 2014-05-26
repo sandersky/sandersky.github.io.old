@@ -1,0 +1,4 @@
+name: bootstrap-datetime
+markdown: redcarpet
+highlighter: pygments
+exclude: ['bower_components', 'node_modules']
