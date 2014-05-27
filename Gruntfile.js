@@ -18,11 +18,21 @@ module.exports = function (grunt) {
           filter: 'isFile'
         }]
       }
+    },
+    less: {
+      build: {
+        files: {
+          'css/main.css': 'less/main.less'
+        }
+      }
     }
   });
 
   require('load-grunt-tasks')(grunt);
 
   // Default task(s).
-  grunt.registerTask('default', ['copy']);
+  grunt.registerTask('default', [
+    'copy',
+    'less',
+  ]);
 };

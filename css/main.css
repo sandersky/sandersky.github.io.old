@@ -1,80 +1,83 @@
-html, body {
+html,
+body {
   height: 100%;
 }
-
 body {
-    padding-top: 65px;
+  padding-top: 65px;
 }
-
 #wrap {
   min-height: 100%;
   padding-bottom: 60px;
   position: relative;
 }
-
 .panel-primary .panel-heading a {
   color: #fff;
 }
-
 .timeline {
   list-style: none;
   margin: 0;
   padding: 20px 0;
 }
-
-.timeline-badge {
-  display: none;
-}
-
 .timeline .label {
   padding: .3em .6em;
 }
-
+.timeline-badge {
+  display: none;
+}
 .container .text-muted {
   margin: 20px 0;
 }
-
-.navbar-fixed-bottom ul {
-  list-style: none;
-  margin-bottom: 0;
-}
-
 .navbar-fixed-bottom li {
-  display:inline-block;
+  display: inline-block;
 }
-
 .navbar-fixed-bottom li a {
   display: inline-block;
   height: 40px;
   margin-top: 14px;
   width: 40px;
 }
-
 .navbar-fixed-bottom li img,
 .navbar-fixed-bottom li svg {
   border-radius: 16px;
 }
-
 .navbar-fixed-bottom li img:hover,
 .navbar-fixed-bottom li svg:hover {
   box-shadow: 0 0 4px #fff;
 }
-
-@media(max-width: 767px) {
+.navbar-fixed-bottom ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+.education .label {
+  background-color: #5bc0de;
+}
+.education .timeline-badge {
+  background-color: #5bc0de;
+}
+.experience .label {
+  background-color: #245682;
+}
+.experience .timeline-badge {
+  background-color: #428bca;
+}
+.location .label {
+  background-color: #f0ad4e;
+}
+.location .timeline-badge {
+  background-color: #f0ad4e;
+}
+@media (max-width: 767px) {
   .container .text-muted {
     font-size: 11px;
   }
-
   .navbar-fixed-bottom li a {
     margin-top: 11px;
   }
 }
-
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .timeline {
     position: relative;
   }
-
   .timeline:before {
     border: 2px solid #eee;
     border-radius: 2px;
@@ -86,27 +89,25 @@ body {
     top: 0;
     width: 4px;
   }
-
   .timeline > li:before {
     clear: both;
     content: " ";
     display: table;
   }
-
   .timeline > li:after {
     clear: both;
     content: " ";
     display: table;
   }
-
   .timeline > li:nth-child(odd) .panel {
     float: left;
   }
-
   .timeline > li:nth-child(even) .panel {
     float: right;
   }
-
+  .timeline .panel {
+    width: 47%;
+  }
   .timeline-badge {
     background: #444;
     border-radius: 16px;
@@ -119,9 +120,5 @@ body {
     position: absolute;
     text-align: center;
     width: 32px;
-  }
-
-  .timeline .panel {
-    width: 47%;
   }
 }
