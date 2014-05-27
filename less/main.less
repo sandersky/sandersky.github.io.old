@@ -14,7 +14,8 @@ body {
   position: relative;
 }
 
-.panel-primary .panel-heading a {
+.panel-heading,
+.panel-heading a {
   color: #fff;
 }
 
@@ -29,6 +30,10 @@ body {
 }
 
 .timeline-badge {
+  display: none;
+}
+
+.arrow {
   display: none;
 }
 
@@ -64,7 +69,20 @@ body {
 }
 
 .education {
+  .arrow {
+    border-color: @brand-info;
+  }
+
   .label {
+    background-color: darken(@brand-info, 20%);
+  }
+
+  .panel {
+    border-color: @brand-info;
+    box-shadow: 1px 1px 3px lighten(@brand-info, 30%);
+  }
+
+  .panel-heading {
     background-color: @brand-info;
   }
 
@@ -74,8 +92,17 @@ body {
 }
 
 .experience {
+  .arrow {
+    border-color: @brand-primary;
+  }
+
   .label {
     background-color: darken(@brand-primary, 20%);
+  }
+
+  .panel {
+    border-color: @brand-primary;
+    box-shadow: 1px 1px 3px lighten(@brand-primary, 30%);
   }
 
   .timeline-badge {
@@ -84,7 +111,20 @@ body {
 }
 
 .location {
+  .arrow {
+    border-color: @brand-warning;
+  }
+
   .label {
+    background-color: darken(@brand-warning, 20%);
+  }
+
+  .panel {
+    border-color: @brand-warning;
+    box-shadow: 1px 1px 3px lighten(@brand-warning, 30%);
+  }
+
+  .panel-heading {
     background-color: @brand-warning;
   }
 
@@ -104,6 +144,22 @@ body {
 }
 
 @media(min-width: 768px) {
+  .panel .arrow {
+    border-width: 11px;
+    display: block;
+  }
+
+  .panel .arrow,
+  .panel .arrow:after {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-style: solid;
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+  }
+
   .timeline {
     position: relative;
 
@@ -134,10 +190,26 @@ body {
 
       &:nth-child(odd) .panel {
         float: left;
+        position: relative;
+
+        .arrow {
+            border-right-width: 0;
+            margin-top: -11px;
+            right: -11px;
+            top: 20px;
+        }
       }
 
       &:nth-child(even) .panel {
         float: right;
+        position: relative;
+
+        .arrow {
+            border-left-width: 0;
+            left: -11px;
+            margin-top: -11px;
+            top: 20px;
+        }
       }
     }
 
@@ -155,6 +227,7 @@ body {
     left: 50%;
     line-height: 32px;
     margin-left: -16px;
+    margin-top: 5px;
     position: absolute;
     text-align: center;
     width: 32px;

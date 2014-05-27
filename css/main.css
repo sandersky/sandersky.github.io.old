@@ -10,7 +10,8 @@ body {
   padding-bottom: 60px;
   position: relative;
 }
-.panel-primary .panel-heading a {
+.panel-heading,
+.panel-heading a {
   color: #fff;
 }
 .timeline {
@@ -22,6 +23,9 @@ body {
   padding: .3em .6em;
 }
 .timeline-badge {
+  display: none;
+}
+.arrow {
   display: none;
 }
 .container .text-muted {
@@ -48,19 +52,46 @@ body {
   list-style: none;
   margin-bottom: 0;
 }
+.education .arrow {
+  border-color: #5bc0de;
+}
 .education .label {
+  background-color: #2390b0;
+}
+.education .panel {
+  border-color: #5bc0de;
+  box-shadow: 1px 1px 3px #daf1f8;
+}
+.education .panel-heading {
   background-color: #5bc0de;
 }
 .education .timeline-badge {
   background-color: #5bc0de;
 }
+.experience .arrow {
+  border-color: #428bca;
+}
 .experience .label {
   background-color: #245682;
+}
+.experience .panel {
+  border-color: #428bca;
+  box-shadow: 1px 1px 3px #b9d4ec;
 }
 .experience .timeline-badge {
   background-color: #428bca;
 }
+.location .arrow {
+  border-color: #f0ad4e;
+}
 .location .label {
+  background-color: #c77c11;
+}
+.location .panel {
+  border-color: #f0ad4e;
+  box-shadow: 1px 1px 3px #fceedb;
+}
+.location .panel-heading {
   background-color: #f0ad4e;
 }
 .location .timeline-badge {
@@ -75,6 +106,20 @@ body {
   }
 }
 @media (min-width: 768px) {
+  .panel .arrow {
+    border-width: 11px;
+    display: block;
+  }
+  .panel .arrow,
+  .panel .arrow:after {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-style: solid;
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+  }
   .timeline {
     position: relative;
   }
@@ -101,9 +146,23 @@ body {
   }
   .timeline > li:nth-child(odd) .panel {
     float: left;
+    position: relative;
+  }
+  .timeline > li:nth-child(odd) .panel .arrow {
+    border-right-width: 0;
+    margin-top: -11px;
+    right: -11px;
+    top: 20px;
   }
   .timeline > li:nth-child(even) .panel {
     float: right;
+    position: relative;
+  }
+  .timeline > li:nth-child(even) .panel .arrow {
+    border-left-width: 0;
+    left: -11px;
+    margin-top: -11px;
+    top: 20px;
   }
   .timeline .panel {
     width: 47%;
@@ -117,6 +176,7 @@ body {
     left: 50%;
     line-height: 32px;
     margin-left: -16px;
+    margin-top: 5px;
     position: absolute;
     text-align: center;
     width: 32px;
